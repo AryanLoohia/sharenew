@@ -1,0 +1,268 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bogus:wght@400;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+
+main{
+	width:100vw;
+	height:100vh;
+}
+body {
+	font-family: 'Bogus', sans-serif;
+	font-weight: 400;
+	color: #fff;
+	background-color: #037940;
+	overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+.common {
+    padding: 24px 0px;
+    min-height: 100vh;
+    position: relative;
+}
+header {
+	width: 100%;
+	padding: 20px 0;
+	background-color: #037940; /* Ensure the background color matches */
+}
+
+.header-inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between; /* Align items to both sides */
+	padding: 0 20px; /* Padding for spacing */
+}
+
+.logo img {
+	width: 150px; /* Adjust logo size */
+	height: auto;
+	display: block;
+}
+
+h1 {
+	font-size: 48px; /* Large font size */
+	font-weight: 700; /* Bold font weight */
+	text-transform: uppercase; /* Uppercase letters */
+	color: #000; /* Black color */
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Subtle text shadow */
+	letter-spacing: 2px; /* Spacing between letters */
+	margin: 0; /* Remove default margin */
+	text-align: center; /* Center align */
+	animation: subtlePulse 3s ease-in-out infinite; /* Subtle animation */
+}
+
+@keyframes subtlePulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.02);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+.home-inner {
+	display: flex;
+	flex-wrap: wrap; /* Allow wrapping for smaller screens */
+	justify-content: center;
+	align-items: center;
+	text-align: center; /* Center text for smaller screens */
+	padding: 0 20px; /* Padding for smaller screens */
+}
+
+.home-inner img{
+	width:41%;
+	height:auto;
+}
+
+.home .text {
+	max-width: 600px; /* Adjust max width */
+	margin: 0 20px;
+	text-align: left; /* Left-align text */
+}
+
+.home h5 {
+	font-size: 18px;
+	text-transform: uppercase;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.home h5:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 60px;
+	height: 1px;
+	background-color: #fff;
+}
+
+.home h1 {
+	font-size: 48px; /* Adjust size for responsiveness */
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	color: #000; /* Black color for consistency */
+}
+
+.home p {
+	font-size: 18px;
+	line-height: 1.5;
+	color: #fff; /* White color for the paragraph */
+	margin-bottom: 40px;
+}
+
+.home .btn {
+	font-size: 18px;
+	color: #fff;
+	text-decoration: none;
+	padding: 15px 220px;
+	border: 1px solid #ffffff40;
+	background-color: #037940; /* Match button background with header */
+	transition: background-color 0.3s;
+	display: inline-block; /* Ensure button aligns correctly */
+	margin: 10px 0; /* Margin for spacing */
+}
+
+.home .btn:hover {
+	background-color: #ffffff40;
+}
+
+.shape img {
+	position: absolute;
+	width: 100%;
+	filter: brightness(0);
+	opacity: 1;
+	mix-blend-mode: multiply;
+	z-index: -9;
+}
+
+.shape .shape1 {
+	right: -160px;
+	top: -50px;
+	width: 450px;
+	opacity: .5;
+	transform-origin: center;
+	animation: shape linear 30s infinite reverse;
+}
+
+.shape .shape2 {
+	left: -70px;
+	bottom: -50px;
+	width: 450px;
+	opacity: .5;
+	transform-origin: center;
+	animation: shape linear 30s infinite reverse;
+}
+
+@keyframes shape {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.shape .shape3 {
+	top: 0;
+	left: 0;
+	width: 250px;
+	opacity: .4;
+	transform-origin: center;
+	animation: shape3 linear 20s infinite;
+	transform: translate(-200px, -100px) rotate(0deg);
+}
+
+@keyframes shape3 {
+	100% {
+		transform: translate(1300px, 600px) rotate(360deg);
+	}
+}
+
+.shape .shape4 {
+	left: 0;
+	bottom: 0;
+	width: 150px;
+	opacity: .4;
+	transform-origin: center;
+	animation: shape4 linear 20s infinite 5s;
+	transform: translate(700px, 80px) rotate(0deg);
+}
+
+@keyframes shape4 {
+	100% {
+		transform: translate(1200px, -800px) rotate(360deg);
+	}
+}
+
+.shape .shape5 {
+	left: 500px;
+	top: 0;
+	width: 100px;
+	opacity: 0;
+	transform-origin: center;
+	animation: shape5 linear 25s infinite;
+	transform: translate(0, -150px) rotate(0deg);
+}
+
+@keyframes shape5 {
+	100% {
+		opacity: 1;
+		transform: translate(0, 800px) rotate(720deg);
+	}
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+	.header-inner {
+		padding-left: 10px; /* Adjust padding */
+	}
+	.home-inner {
+		flex-direction: column;
+		text-align: center;
+	}
+	.home .text {
+		margin: 0 0 20px 0;
+		text-align: center;
+	}
+	.home h1 {
+		font-size: 36px;
+	}
+	.home p {
+		font-size: 16px;
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 480px) {
+	.header-inner {
+		padding-left: 5px; /* Adjust padding */
+	}
+	.home h1 {
+		font-size: 28px;
+	}
+	.home p {
+		font-size: 14px;
+		line-height: 1.4;
+	}
+	.home .btn {
+		font-size: 16px;
+		padding: 10px 15px;
+	}
+	.shape img {
+		width: 150%; /* Adjust shape size */
+	}
+	.shape .shape1, .shape .shape2, .shape .shape3, .shape .shape4, .shape .shape5 {
+		width: 100%;
+	}
+}
